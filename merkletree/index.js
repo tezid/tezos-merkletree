@@ -8,11 +8,6 @@ import {
 import { createHash } from 'crypto'
 import { packDataBytes, packData } from '@taquito/michel-codec'
 
-const toBuffer = (value) => {
-  if (Buffer.isBuffer(value)) return value
-  return Buffer.from(value)
-}
-
 const combine = (hashAlgorithm = 'sha256', encoding = 'hex') => (leftData, rightData) => {
   return createHash(hashAlgorithm).update(leftData+rightData,'hex').digest(encoding)
 }
