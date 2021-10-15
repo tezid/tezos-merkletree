@@ -1,4 +1,4 @@
-# TezID Tezos Merkletree
+# Tezos Merkletree
 
 Merkletree implementation that matches Tezos onChain hashing.
 
