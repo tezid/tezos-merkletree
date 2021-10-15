@@ -14,15 +14,7 @@ const toBuffer = (value) => {
 }
 
 const combine = (hashAlgorithm = 'sha256', encoding = 'hex') => (leftData, rightData) => {
-  const hash = createHash(hashAlgorithm)
-//  console.log(leftData, rightData)
-//  const bytes = packDataBytes({ "string": leftData+rightData }).bytes
-//  const input = Buffer.concat([
-//    toBuffer(leftData),
-//    toBuffer(rightData),
-//  ])
-//  console.log(bytes)
-  return hash.update(leftData+rightData,'hex').digest(encoding)
+  return createHash(hashAlgorithm).update(leftData+rightData,'hex').digest(encoding)
 }
 
 export const computeTree = (combineFn) => (leaves) => {
