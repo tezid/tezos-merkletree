@@ -8,6 +8,6 @@ The current use-case is so we can create a merkleproof in Javascript that can be
 
 For TezID we use this to enable set membership verification in zero knowledge onChain.
 
-Heavily inspired https://github.com/binded/merkletree.
+Heavily inspired by https://github.com/binded/merkletree.
 
 enjoy. 
